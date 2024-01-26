@@ -53,8 +53,8 @@ async function copyFiles(baseDir, copyDir) {
       return copyFiles(elUrl, innerDir);
     }
     try {
-      const data = await fs.readFile(elUrl, "utf8");
-      fs.writeFile(path.join(copyDir, el), data);
+      const fileData = await fs.readFile(elUrl, "utf8");
+      fs.writeFile(path.join(copyDir, el), fileData);
     } catch {
       throw new Error(errorMessage);
     }
