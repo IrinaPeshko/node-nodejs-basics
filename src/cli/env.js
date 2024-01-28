@@ -6,7 +6,8 @@ const parseEnv = () => {
   filteredArr.map((el) => {
     envResult.push(`${el}=${process.env[el]}`);
   });
-  console.log(filteredArr.join("; "));
+
+  console.log(envResult.join("; "));
 };
 
 parseEnv();
